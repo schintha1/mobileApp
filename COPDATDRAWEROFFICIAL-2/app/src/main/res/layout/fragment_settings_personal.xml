@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="?android:attr/textAppearanceLarge"
+         android:text="personal"
+         android:id="@+id/textView"
+         android:layout_centerVertical="true"
+         android:layout_centerHorizontal="true" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="25dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="34dp"
+                android:id="@+id/scrollView2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textFirstname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="1dp"
+                        android:text="Firstname:" />
+
+                    <EditText
+                        android:id="@+id/editFName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textFirstname"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:ems="14"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords">
+
+                        <requestFocus />
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textLastname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_below="@+id/editFName"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="78dp"
+                        android:text="Lastname:" />
+
+                    <EditText
+                        android:id="@+id/editLastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textLastname"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:ems="14"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords">
+
+                        <requestFocus />
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/editLastName"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Address:" />
+
+                    <EditText
+                        android:id="@+id/editAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textAddress"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:ems="15"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/editCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/editAddress"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:ems="8"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:nextFocusDown="@+id/editState">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/editState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/editCity"
+                        android:layout_toEndOf="@+id/editCity"
+                        android:layout_toRightOf="@+id/editCity"
+                        android:ems="2"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="2"
+                        android:nextFocusDown="@+id/editZipcode">
+
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/editZipcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/editState"
+                        android:layout_toEndOf="@+id/editState"
+                        android:layout_toRightOf="@+id/editState"
+                        android:ems="5"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberSigned"
+                        android:maxLength="5"
+                        android:nextFocusDown="@+id/editHome">
+
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textHomephone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/editCity"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Homephone:" />
+
+                    <EditText
+                        android:id="@+id/editHomephone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textHomephone"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:ems="7"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="14"
+                        android:nextFocusDown="@+id/editHomephone">
+
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textCardnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/editHomephone"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp" />
+
+
+                    <EditText
+                        android:id="@+id/editCardnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textCardnumber"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:ems="7"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="16"
+                        android:nextFocusDown="@+id/editHomephone">
+
+                    </EditText>
+
+
+                    <TextView
+                        android:id="@+id/textEMail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/editCardnumber"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="E-Mail Address:" />
+
+                    <EditText
+                        android:id="@+id/editEMail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textEMail"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:ems="13"
+                        android:inputType="textEmailAddress">
+
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/Autopurchasepin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/editEMail"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Autopurchasepin:" />
+
+                    <EditText
+                        android:id="@+id/editAutopurchasepin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/Autopurchasepin"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:ems="7"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="5"
+                        android:nextFocusDown="@+id/editAutopurchasepin">
+
+                    </EditText>
+
+
+
+                    <Button
+                        android:id="@+id/btnpersonal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/editAutopurchasepin"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="50dp"
+                        android:text="Save" />
+
+
+
+                </RelativeLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSettings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Personal"
+            android:background="@color/color"
+            />
+
+        <Button
+            android:id="@+id/btn_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Card"
+            android:background="@color/colorBlue"/>
+
+        <Button
+            android:id="@+id/btn_Preferences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Preferences"
+            android:background="@color/colorBlue"/>
+    </LinearLayout>
+
+</RelativeLayout>

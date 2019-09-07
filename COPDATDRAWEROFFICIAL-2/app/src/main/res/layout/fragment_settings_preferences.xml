@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_height="450dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="40dp">
+
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSettings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Personal"
+            android:background="@color/colorBlue"
+            />
+
+        <Button
+            android:id="@+id/btn_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Card"
+            android:background="@color/colorBlue"/>
+
+        <Button
+            android:id="@+id/btn_Preferences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Preferences"
+            android:background="@color/color"/>
+    </LinearLayout>
+
+</RelativeLayout>

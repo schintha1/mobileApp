@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fff">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="45dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="34dp"
+            android:id="@+id/scrollView3"
+            android:layout_marginStart="34dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:id="@+id/textCardnumber"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="Cardnumber:"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editCardnumber"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:ems="16"
+                    android:layout_below="@+id/textCardnumber">
+    <requestFocus/>
+</EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="78dp"
+        android:id="@+id/textNameoncard"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="Name on card:"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editCardnumber"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNameoncard"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:inputType="textCapWords"
+        android:imeOptions="actionNext"
+        android:ems="14"
+        android:layout_below="@+id/textNameoncard">
+    <requestFocus/>
+</EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textBillingaddress"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:text="Billing Address:"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editNameoncard"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editBillingaddress"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:inputType="textCapWords"
+        android:imeOptions="actionNext"
+        android:ems="15"
+        android:layout_below="@+id/textBillingaddress">
+    </EditText>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editCity"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:inputType="textCapWords"
+        android:imeOptions="actionNext"
+        android:ems="8"
+        android:layout_below="@+id/editBillingaddress"
+        android:nextFocusDown="@+id/editState">
+    </EditText>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editState"
+        android:inputType="textCapCharacters"
+        android:imeOptions="actionNext"
+        android:ems="2"
+        android:nextFocusDown="@+id/editZipcode"
+        android:maxLength="2"
+        android:layout_toRightOf="@+id/editCity"
+        android:layout_toEndOf="@+id/editCity"
+        android:layout_alignBottom="@+id/editCity">
+    </EditText>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editZipcode"
+        android:inputType="numberSigned"
+        android:imeOptions="actionNext"
+        android:ems="5"
+        android:nextFocusDown="@+id/editCSV"
+        android:maxLength="5"
+        android:layout_toRightOf="@+id/editState"
+        android:layout_toEndOf="@+id/editState"
+        android:layout_alignBottom="@+id/editState">
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textCvs"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:text="CSV"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true" android:layout_below="@+id/editState"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editCSV"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+
+        android:layout_alignParentLeft="true"
+        android:inputType="phone"
+        android:imeOptions="actionNext"
+        android:ems="7"
+        android:layout_below="@+id/textCvs"
+        android:nextFocusDown="@+id/editCardnumber"
+        android:maxLength="16"> </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/Autopurchasepin"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:text="Autopurchasepin:"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editCSV"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editAutopurchasepin"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:inputType="phone"
+        android:imeOptions="actionNext"
+        android:ems="7"
+        android:layout_below="@+id/Autopurchasepin"
+        android:nextFocusDown="@+id/btncard"
+        android:maxLength="5">
+    </EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/btncard"
+        android:layout_marginStart="100dp"
+        android:layout_alignParentStart="true"
+        android:text="Save Card"
+        android:layout_marginLeft="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editAutopurchasepin"/>
+</RelativeLayout>
+
+</ScrollView>
+    android:layout_height="match_parent"
+        android:layout_width="match_parent">
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/layoutSettings">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue"
+        android:id="@+id/btn_Personal"
+        android:text="Personal"
+        android:layout_weight="1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color"
+        android:id="@+id/btn_Card"
+        android:text="Card"
+        android:layout_weight="1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue"
+        android:id="@+id/btn_Preferences"
+        android:text="Preferences"
+        android:layout_weight="1"/>
+</LinearLayout>
+</RelativeLayout>
